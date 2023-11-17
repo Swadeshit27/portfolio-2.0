@@ -18,7 +18,7 @@ const Contact = () => {
                     <p className="text-sm sm:text-lg opacity-70">
                         I am available for any freelance or internship or full-time positions
                     </p>
-                    <p className=" text-sm sm:text-lg opacity-80">Connect me and let's talk</p>
+                    <p className=" text-sm sm:text-lg opacity-80">Connect me and let&apos;s talk</p>
                 </div>
                 <div className="w-full flex max-md:flex-col mt-4 mb-12 p-4">
                     <div className="md:w-2/5 max-md:mb-6 md:pe-8">

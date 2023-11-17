@@ -24,7 +24,7 @@ export default function Home() {
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 2 * 0.5, duration: 0.6, ease: 'easeOut' }}
-              className="text-center text-sm md:text-2xl font-libre text-yellow-500">Hello I'm ✋</motion.p>
+              className="text-center text-sm md:text-2xl font-libre text-yellow-500">Hello I&apos;m ✋</motion.p>
             <motion.h1
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}

@@ -28,7 +28,7 @@ const About = () => {
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ delay: 2 * 0.3, duration: 0.6, ease: 'easeOut' }}
                             className="text-sm sm:text-lg font-semibold text-yellow-500 w-full">
-                            Hello, I'm 👋
+                            Hello, I&apos;m 👋
                         </motion.p>
                         <motion.h1
                             initial={{ y: -20, opacity: 0 }}
