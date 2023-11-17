@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import myPhoto from "@/assets/myphoto.png"
 import Image from 'next/image'

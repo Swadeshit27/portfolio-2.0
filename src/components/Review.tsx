@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useState } from 'react';
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi"
 // Import Swiper React components
