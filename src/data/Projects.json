@@ -1,0 +1,135 @@
+[
+  {
+    "category": "front-end",
+    "name": "Music website",
+    "code": "https://github.com/Swadeshit27/Music_website.git",
+    "demo": "https://swadeshit27.github.io/Music_website",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["HTML", "CSS", "JavaScript"],
+    "imagesPath": "/Projects/music.png"
+  },
+  {
+    "category": "front-end",
+    "name": "Calculator",
+    "code": "https://github.com/Swadeshit27/Calculator.git",
+    "demo": "https://swadeshit27.github.io/Calculator",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["HTML", "CSS", "JavaScript"],
+    "imagesPath": "/Projects/calculator.png"
+  },
+  {
+    "category": "front-end",
+    "name": "Weather Reports",
+    "code": "https://github.com/Swadeshit27/Weather-App.git",
+    "demo": "https://swadeshit27.github.io/Weather-App",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["HTML", "CSS", "JavaScript", "Weather api"],
+    "imagesPath": "/Projects/weatherReports.png"
+  },
+  {
+    "category": "front-end",
+    "name": "textUtils website",
+    "code": "https://github.com/Swadeshit27/TextUtils-App.git",
+    "demo": "https://swadeshit27.github.io/TextUtils-App",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["React js", "Bootstrap"],
+    "imagesPath": "/Projects/textutils.png"
+  },
+  {
+    "category": "front-end",
+    "name": "News website",
+    "code": "https://github.com/Swadeshit27/News-App",
+    "demo": "https://news-app-vdju-oyy8i4tub-swadeshit27.vercel.app/",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["React js", "Bootstrap", "News api"],
+    "imagesPath": "/Projects/news.png"
+  },
+  {
+    "category": "front-end",
+    "name": "advance to do list",
+    "code": "https://github.com/Swadeshit27/News-App",
+    "demo": "https://news-app-vdju-oyy8i4tub-swadeshit27.vercel.app/",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["React js", "Bootstrap", "News api"],
+    "imagesPath": "/Projects/todoList.png"
+  },
+  {
+    "category": "fullstack",
+    "name": "weather reports",
+    "code": "https://github.com/Swadeshit27/Full-Authorized-Weather-App.git",
+    "demo": "",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": [
+      "React js",
+      "Bootstrap",
+      "handelbars",
+      "Node js",
+      "express js",
+      "mongodb"
+    ],
+    "imagesPath": "/Projects/fullstackWeather.png"
+  },
+  {
+    "category": "fullstack",
+    "name": "Doctor's appointment",
+    "code": "https://github.com/Swadeshit27/Doctor_Appointment-frontend.git",
+    "demo": "https://doctor-appointment-frontend.vercel.app",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["React js", "Bootstrap", "Node js", "express js", "mongodb"],
+    "imagesPath": "/Projects/textutils.png"
+  },
+  {
+    "category": "fullstack",
+    "name": "e-comerce website",
+    "code": "https://github.com/Swadeshit27/SWA-CART_ecommerce_website.git",
+    "demo": "https://totalitycorp-frontend-challenge-phi.vercel.app",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["React js", "Tailwind css", "Node js", "express js", "mongodb"],
+    "imagesPath": "/Projects/ecommerce website.png"
+  },
+  {
+    "category": "collegeProjects",
+    "name": "NSS JGEC website",
+    "code": "https://github.com/Swadeshit27/SWA-CART_ecommerce_website.git",
+    "demo": "https://totalitycorp-frontend-challenge-phi.vercel.app",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["React js", "Tailwind css", "Node js", "express js", "mongodb"],
+    "imagesPath": "/Projects/textutils.png"
+  },
+  {
+    "category": "collegeProjects",
+    "name": "CFI JGEC website",
+    "code": "https://github.com/Swadeshit27/SWA-CART_ecommerce_website.git",
+    "demo": "https://totalitycorp-frontend-challenge-phi.vercel.app",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["React js", "Tailwind css", "Node js", "express js", "mongodb"],
+    "imagesPath": "/Projects/textutils.png"
+  },
+  {
+    "category": "collegeProjects",
+    "name": "SRISTI Techfest website",
+    "code": "https://github.com/Swadeshit27/SWA-CART_ecommerce_website.git",
+    "demo": "https://totalitycorp-frontend-challenge-phi.vercel.app",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["React js", "Tailwind css", "Node js", "express js", "mongodb"],
+    "imagesPath": "/Projects/textutils.png"
+  },
+  {
+    "category": "back-end",
+    "name": "Admin_panel",
+    "code": "https://github.com/Swadeshit27/SWA-CART_ecommerce_website.git",
+    "demo": "",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["React js", "Tailwind css", "Node js", "express js", "mongodb"],
+    "imagesPath": "/Projects/textutils.png"
+  },
+  {
+    "category": "ui/ux",
+    "name": "SRISTI Techfest website",
+    "code": "https://github.com/Swadeshit27/SWA-CART_ecommerce_website.git",
+    "demo": "https://totalitycorp-frontend-challenge-phi.vercel.app",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium hic fugit est, tempore doloribus vel veritatis ut facere non, nihil cumque maiores harum in laudantium debitis nisi eligendi iure quisquam fugiat odit soluta.",
+    "techTools": ["React js", "Tailwind css", "Node js", "express js", "mongodb"],
+    "imagesPath": "/Projects/textutils.png"
+  }
+]
