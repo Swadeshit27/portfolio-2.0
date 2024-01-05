@@ -1,9 +1,6 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
-import StarsCanvas from '@/components/StarCanvas'
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -17,10 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={"w-full h-screen overflow-y-scroll bg-gray-900"}>
         <Navbar />
-        <div className="relative z-20 w-full">
-          <StarsCanvas />
+        <div className="w-full h-full pt-20 relative z-20 ">
           {children}
         </div>
       </body>

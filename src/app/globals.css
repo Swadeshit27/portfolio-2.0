@@ -21,6 +21,12 @@ body {
 
 @layer base {
   .activeBtn {
-    @apply  bg-violet-500 ;
+    @apply bg-violet-500;
+  }
+  .gradient {
+    @apply bg-gradient-to-bl from-rose-500 via-blue-300 to-violet-500;
+  }
+  .reverse_box {
+    @apply right-[-8px]  border-l-violet-700 border-l-8  border-r-0;
   }
 }

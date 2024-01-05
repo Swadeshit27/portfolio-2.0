@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,40 +11,41 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // import required modules
-import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper/modules';
+import { Keyboard, Scrollbar, Pagination, Autoplay } from 'swiper/modules';
 import Header from './Header';
+import Layout from './Layout';
 
-export default function Review() {
+export default function Review(): JSX.Element {
     return (
         <>
-            <div className='w-full max-w-[1300px] min-h-screen pt-24 mx-auto '>
+            <Layout>
                 <Header title='Impression' />
-                <div className="w-full h-[24rem]">
+                <div className="w-full h-[20rem]">
                     <Swiper
                         slidesPerView={1}
-                        autoplay={true}
+                        loop={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
                         centeredSlides={false}
                         slidesPerGroupSkip={1}
                         grabCursor={true}
-                        keyboard={{
-                            enabled: true,
-                        }}
                         breakpoints={{
-                            769: {
+                            1000: {
                                 slidesPerView: 2,
                                 slidesPerGroup: 2,
                             },
                         }}
                         scrollbar={true}
-                        navigation={true}
                         pagination={{
                             clickable: true,
                         }}
-                        modules={[Keyboard, Scrollbar, Navigation, Pagination]}
+                        modules={[Autoplay, Keyboard, Scrollbar, Pagination]}
                         className="mySwiper"
                     >
                         <SwiperSlide>
-                            <ReviewCard/>
+                            <ReviewCard />
                         </SwiperSlide>
                         <SwiperSlide>
                             <ReviewCard />
@@ -63,7 +64,7 @@ export default function Review() {
                         </SwiperSlide>
                     </Swiper>
                 </div>
-            </div>
+            </Layout>
         </>
     );
 }
@@ -72,12 +73,12 @@ export default function Review() {
 const ReviewCard = () => {
     return (
         <>
-            <div className="w-[85%] h-[23rem] mx-auto rounded-md bg-gradient-to-bl from-rose-500 via-blue-300 to-violet-500 flex justify-center items-center my-8 ">
-                <div className='w-[99.5%] h-[99%] bg-black/80 backdrop-blur-lg rounded-md p-4 sm:p-8'>
-                    <div className=' text-xl sm:text-2xl font-dancing mb-4 relative'>
-                        <BiSolidQuoteAltLeft className={"text-rose-300 text-3xl sm:text-4xl"} />
-                        <span className='px-6'>Lorem ipsum dolor sit amet consec sdf adfasdf safasdf  sdfs tetur, adipisicing elit. Nisi rerum vel adipisci totam quis voluptate deserunt repellat quas aut obcaecati tempore, sint quod.</span> 
-                        <BiSolidQuoteAltRight className={"text-rose-300 text-3xl sm:text-4xl absolute right-2 bottom-[-1rem]"} />
+            <div className="w-[90%] md:w-[70%] lg:w-[85%] h-[20rem] mx-auto rounded-md gradient flex justify-center items-center my-8 ">
+                <div className='w-[99.5%] h-[99%] bg-black/80 backdrop-blur-lg rounded-md px-8 py-6 sm:py-8 sm:px-12'>
+                    <div className=' text-[12px] sm:text-2xl  mb-4 relative'>
+                        <BiSolidQuoteAltLeft className={"text-rose-300 text-3xl sm:text-3xl absolute left-[-2rem] top-[-.8rem]"} />
+                        <span className=' text-[16px]  md:leading-[10px]'>Lorem ipsum dolor sit  dsdf sadf dfdsf sdf  asdfd sdfds sdf ds amet consec sdf adfasdf safasdf  sdfs tetur, adipisicing elit. Nisi rerum vel adipisci totam quis voluptate deserunt repellat quas aut obcaecati tempore, sint quod.</span>
+                        <BiSolidQuoteAltRight className={"text-rose-300 text-3xl sm:text-3xl absolute right-[-2rem] bottom-[.8rem]"} />
                     </div>
                     <div className=' float-right font-libre m-3 '>
                         <h1 className='text-xl'>~ Swadesh Pal</h1>
