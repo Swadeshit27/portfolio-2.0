@@ -16,7 +16,7 @@ const Projects = (): JSX.Element => {
                 {
                     ProjectList.filter(items => items?.isBest === true).map((project, i) => {
                         return (
-                            <motion.div>
+                            <motion.div key={i}>
                                 <ProjectCard project={project} />
                             </motion.div>
                         )

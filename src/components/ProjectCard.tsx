@@ -20,7 +20,7 @@ const ProjectCard = ({ project }: { project: ProjectsListType }):JSX.Element => 
                         </p>
                         <p className='max-sm:text-[12px] text-[16px] font-semibold'>
                         {
-                            project.techTools.map(item => (<span className='me-2 text-rose-400'>#{item}</span>))
+                            project.techTools.map(item => (<span key={item} className='me-2 text-rose-400'>#{item}</span>))
                         }
                     </p>
                 </div>

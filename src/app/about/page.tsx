@@ -77,7 +77,7 @@ const AboutPage = () => {
                         EducationList.map(item => {
                             const { date, title, details, isReverse } = item;
                             return (
-                                <div className={`flex justify-end min-h-[12rem] lg:w-[54%]  pt-12 font-libre  ${!isReverse ? "ms-2" : "ms-2 lg:ms-auto lg:flex-row-reverse"}`}>
+                                <div key={title} className={`flex justify-end min-h-[12rem] lg:w-[54%]  pt-12 font-libre  ${!isReverse ? "ms-2" : "ms-2 lg:ms-auto lg:flex-row-reverse"}`}>
                                     <div className='w-[16rem] sm:w-[25rem] min-h-[8rem] rounded-lg bg-violet-700 me-3 sm:mx-4 relative p-3 sm:px-6 sm:py-4'>
                                         <div className={`absolute  top-8 border-solid   border-y-transparent border-y-8 ${!isReverse ? "reverse_box" : "max-lg:reverse_box lg:left-[-8px] lg:border-r-violet-700 lg:border-r-8  lg:border-l-0"}`}></div>
                                         <div className='flex items-center '><FaCalendarAlt className={'text-lg sm:text-xl'} /> <span className='text-sm sm:text-[16px] ms-2 sm:ms-4'>{date}</span> </div>

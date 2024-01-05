@@ -30,7 +30,7 @@ const MapComp = ({ category, heading }: { category: string, heading: string }) =
                 {
                     ProjectList.filter(items => items.category === category).map((project, i) => {
                         return (
-                            <motion.div>
+                            <motion.div key={i}>
                                 <ProjectCard project={project} />
                             </motion.div>
                         )
