@@ -8,8 +8,7 @@ import { ProjectList } from '@/data/Projects'
 
 const Projects = () => {
     return (
-        <Layout>
-            <Header title='projects'  />
+        <Layout title='projects'>
             <MapComp category={"fullstack"} heading='full stack projects' />
             <MapComp category={"collegeProjects"} heading='College projects' />
             <MapComp category={"front-end"} heading='front-end projects' />

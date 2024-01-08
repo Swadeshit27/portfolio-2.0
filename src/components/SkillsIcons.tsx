@@ -9,7 +9,7 @@ type Props = {
 
 const SkillsIcons = (props: Props):JSX.Element => {
     return (
-        <div className="w-[90%] md:w-2/5 max-md:mx-auto mb-4">
+        <div className="w-full md:w-2/5 max-md:mx-auto mb-4">
             <h1 className="text-2xl font-medium capitalize font-libre mb-2 sm:mb-4 text-green-500">
                 {props.heading}
             </h1>

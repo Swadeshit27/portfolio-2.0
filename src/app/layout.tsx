@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/components/Navbar'
+import img from "./Icons/person96.png"
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
+  title: 'Portfolio|Swadesh Pal',
   description: 'Created by Swadesh Pal',
 }
 

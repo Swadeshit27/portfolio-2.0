@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import { ProjectList } from "@/data/Projects"
-import Header from '@/components/Header'
 import { motion } from "framer-motion"
 import ProjectCard from '@/components/ProjectCard'
 import Layout from './Layout'
@@ -10,8 +9,7 @@ import Link from 'next/link'
 
 const Projects = (): JSX.Element => {
     return (
-        <Layout>
-            <Header title='Projects' />
+        <Layout title='Projects'>
             <div className='w-full h-full flex flex-wrap justify-evenly'>
                 {
                     ProjectList.filter(items => items?.isBest === true).map((project, i) => {

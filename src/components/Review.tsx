@@ -12,14 +12,12 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Keyboard, Scrollbar, Pagination, Autoplay } from 'swiper/modules';
-import Header from './Header';
 import Layout from './Layout';
 
 export default function Review(): JSX.Element {
     return (
         <>
-            <Layout>
-                <Header title='Impression' />
+            <Layout title='Impression'>
                 <div className="w-full h-[20rem]">
                     <Swiper
                         slidesPerView={1}

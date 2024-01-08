@@ -3,7 +3,6 @@ import React from 'react'
 import Image from 'next/image'
 import education from "@/assets/education.png"
 import Layout from '@/components/Layout'
-import Header from '@/components/Header'
 import myPhoto from "@/assets/myphoto.png"
 import { CodingProfiles, EducationList, PersonalDetails } from "@/data/Education"
 import { FaCalendarAlt } from "react-icons/fa";
@@ -13,8 +12,7 @@ import Link from 'next/link'
 const AboutPage = () => {
     return (
         <>
-            <Layout>
-                <Header title={"about me"} />
+            <Layout title='about me'>
                 <div className="w-full max-w-[1200px] h-full flex max-md:flex-col justify-between mx-auto">
                     <div className="w-[90%] mx-auto md:w-[50%] min-h-[60vh] h-full  font-libre max-md:order-2">
                         <p className="text-sm sm:text-lg font-semibold text-yellow-500 w-full">
@@ -28,10 +26,10 @@ const AboutPage = () => {
                         </p>
                         <div className='flex gap-x-8 my-4'>
                             <Link href={"https://drive.google.com/file/d/1Xp70JqnIYtOft9AHyetlVSFW8QtG9g-5/view?usp=sharing"}>
-                                <div className='cursor-pointer drop-shadow-lg shadow-violet-300 bg-violet-700 rounded-full text-lg text-white text-center w-36 py-3'>Resume</div>
-                            </Link>
+                                <div className='filledBtn'>Resume</div>
+                            </Link> 
                             <Link href={"/contact"}>
-                                <div className='cursor-pointer drop-shadow-lg shadow-violet-300 border-2 border-violet-700 rounded-full text-lg text-white text-center w-36 py-3'>Hire Me</div>
+                                <div className='outlinedBtn'>Hire Me</div>
                             </Link>
                         </div>
                     </div>

@@ -12,7 +12,7 @@ const Navbar = (): JSX.Element => {
     const [active, setActive] = useState("home");
     return (
         <>
-            <div className={`w-full h-20  fixed z-50 top-0 backdrop-blur-md flex justify-between items-center px-4 sm:px-12 shadow-md shadow-[#3a3a3a]`}>
+            <div className={`w-full h-20  fixed z-50 top-0 bg-gray-900 backdrop-blur-md flex justify-between items-center px-4 sm:px-12 shadow-md shadow-[#3a3a3a]`}>
                 <Link href={"/"}>
                     <h1 className=' cursor-pointer font-dancing text-3xl capitalize'>swadesh pal</h1>
                 </Link>
@@ -38,9 +38,8 @@ const Navbar = (): JSX.Element => {
                         <h1 className='mt-12 text-center font-dancing text-2xl'>Swadesh pal</h1>
                         <ul className='w-2/5 h-[20rem] mx-auto pt-20'>
                             {NavItemList.map((item, index) => (
-                                <li key={index} className='cursor-pointer  font-libre my-3 text-lg group'>
+                                <li key={index} className='cursor-pointer  font-libre my-3 text-lg '>
                                     <Link href={item.path} onClick={() => setOpen(false)}>{item.name}</Link>
-                                    <div className=" absolute w-0 h-[3px] bg-white group-hover:w-full transition-[width] ease-out duration-300" />
                                 </li>
                             ))}
                         </ul>

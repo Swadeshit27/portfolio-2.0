@@ -29,4 +29,10 @@ body {
   .reverse_box {
     @apply right-[-8px]  border-l-violet-700 border-l-8  border-r-0;
   }
+  .filledBtn{
+    @apply cursor-pointer drop-shadow-lg shadow-violet-300 bg-violet-700 rounded-full sm:text-lg text-white text-center w-32 sm:w-36 py-3
+  }
+  .outlinedBtn{
+    @apply cursor-pointer drop-shadow-lg shadow-violet-300 border-2 border-violet-700 rounded-full sm:text-lg text-white text-center w-32 sm:w-36 py-3
+  }
 }

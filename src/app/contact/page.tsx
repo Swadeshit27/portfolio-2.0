@@ -9,9 +9,8 @@ import { BsFillSendFill } from "react-icons/bs";
 const Contact = () => {
     return (
         <>
-            <Layout>
-                <Header title='Contact me' />
-                <div className='w-full font-libre p-4'>
+            <Layout title='Contact me'>
+                <div className='w-full font-libre sm:p-4'>
                     <h3 className="text-2xl sm:text-3xl font-medium text-green-500 tracking-wide">
                         Get in touch
                     </h3>
@@ -20,7 +19,7 @@ const Contact = () => {
                     </p>
                     <p className=" text-sm sm:text-lg opacity-80">Connect me and let&apos;s talk</p>
                 </div>
-                <div className="w-full flex max-md:flex-col mt-4 mb-12 p-4">
+                <div className="w-full flex max-md:flex-col mt-4 mb-12 sm:p-4">
                     <div className="md:w-2/5 max-md:mb-6 md:pe-8">
                         <div className="w-full h-[26rem] rounded-md bg-gradient-to-bl gradient flex justify-center items-center">
                             <div className='w-[99%] h-[99%] bg-black/80 backdrop-blur-lg rounded-md  p-4'>
@@ -36,7 +35,7 @@ const Contact = () => {
                                     </h4>
                                     <h4 className=" flex  items-center gap-4 my-3">
                                         <FaTelegram size={22} color="0088cc" />
-                                        @Pal6378
+                                        @swadesh987
                                     </h4>
                                     <h4 className=" flex  items-center gap-4 my-3">
                                         <FaWhatsapp size={22} color="#1aff66" />
@@ -55,10 +54,10 @@ const Contact = () => {
                         <div className="w-full h-[26rem] rounded-md bg-gradient-to-bl gradient flex justify-center items-center">
                             <div className='w-[99.5%] h-[99%] bg-black/80 backdrop-blur-lg rounded-md  p-4 sm:p-8'>
                                 <form>
-                                    <input type="text" placeholder='your name' className='w-full sm:w-full rounded-md px-4 py-2 mb-3 capitalize' />
-                                    <input type="email" placeholder='your email' className='w-full sm:w-full rounded-md px-4 py-2 mb-3 ' />
-                                    <input type="number" placeholder='your mobile number' className='w-full sm:w-full rounded-md px-4 py-2 mb-3 ' />
-                                    <textarea rows={5} placeholder='your message' className=' form-control w-full sm:w-full rounded-md px-4 py-2 mb-3 ' />
+                                    <input type="text" required placeholder='Your name' className='w-full sm:w-full rounded-md px-4 py-2 mb-3 capitalize' />
+                                    <input type="email" required placeholder='Your email' className='w-full sm:w-full rounded-md px-4 py-2 mb-3 ' />
+                                    <input type="number" required placeholder='Your mobile number' className='w-full sm:w-full rounded-md px-4 py-2 mb-3 ' />
+                                    <textarea rows={5} required placeholder='Your message' className=' form-control w-full sm:w-full rounded-md px-4 py-2 mb-3 ' />
                                 </form>
                                 <button className=' px-4 py-2 text-lg  font-libre bg-violet-700 rounded-md capitalize flex item-center text-center'>send <BsFillSendFill className={"ms-2"} /></button>
                             </div>

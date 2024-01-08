@@ -1,4 +1,5 @@
 
+
 export interface navItemsType {
   name: string;
   path: string;
@@ -32,4 +33,8 @@ export interface ExperienceListType {
   role: string,
   certificate: string,
   details: string
+}
+export interface AchievementType{
+  title: string,
+  link: string
 }
