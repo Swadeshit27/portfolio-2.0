@@ -1,5 +1,5 @@
 # Portfolio website
-Live link:  https://portfolio-2-0-beta-swart.vercel.app
+Live link:   https://portfolio-swadesh-pal.vercel.app
 ```
-   bash https://portfolio-2-0-beta-swart.vercel.app
+    https://portfolio-swadesh-pal.vercel.app
 ```
