@@ -16,9 +16,16 @@ const config: Config = {
       fontFamily: {
         libre: "Libre Baskerville",
         dancing: "Dancing Script",
+        poppins:"Poppins",
       },
+      screens: {
+        xs: "475px",
+        mlg:"850px",
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 };
 export default config;

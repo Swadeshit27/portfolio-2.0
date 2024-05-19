@@ -1,11 +1,15 @@
-"use client";
-import Review from "@/components/Review";
-import Skills from "@/components/Skills";
-import SocialIcons from "@/components/SocialIcons";
-import HomePage from "@/components/HomePage";
-import Projects from "@/components/Projects";
-import Footer from "@/components/Footer";
-import Experience from "@/components/Experience";
+
+import Skills from "@/components/Home/Skills";
+import SocialIcons from "@/components/Home/SocialIcons";
+import HomePage from "@/components/Home/HomePage";
+import Projects from "@/components/Home/Projects";
+import Footer from "@/components/common/Footer";
+import Experience from "@/components/Home/Experience";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home"
+}
 
 export default function Home() {
   return (
@@ -13,9 +17,7 @@ export default function Home() {
       <HomePage />
       <Experience />
       <Skills />
-      <Projects />
-      {/* <Review /> */}
-      {/*social icons  */}
+      <Projects /> 
       <SocialIcons />
       <Footer />
     </>

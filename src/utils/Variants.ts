@@ -45,3 +45,14 @@ export const LayoutHeaderVariant = {
         opacity: 1,
     },
 }
+
+export const headerPopUp = {
+    hidden: {
+        y: -50,
+        opacity: 0,
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+    },
+}

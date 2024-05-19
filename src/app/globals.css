@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,13 +11,42 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  color-scheme: dark;
+  scroll-behavior: smooth !important;
+}
+*::-webkit-scrollbar {
+  display: none;
 }
 
 html,
 body {
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+.flip-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.icon-1 {
+  color: #ff4d4d !important;
+}
+.border-custom {
+  border-radius: 40% 60% 55% 45% / 26% 34% 66% 74%;
+  /* border-radius: 57% 43% 54% 46% / 60% 77% 23% 40%; */
+  background: #3023ae;
+  background-image: linear-gradient(45deg, #3023ae 0%, #ff0099 100%);
 }
 
 @layer base {
@@ -29,10 +59,19 @@ body {
   .reverse_box {
     @apply right-[-8px]  border-l-violet-700 border-l-8  border-r-0;
   }
-  .filledBtn{
-    @apply cursor-pointer drop-shadow-lg shadow-violet-300 bg-violet-700 rounded-full sm:text-lg text-white text-center w-32 sm:w-36 py-3
+  .left_arrow {
+    @apply left-[-8px]  border-r-violet-700  border-r-8   border-l-0;
   }
-  .outlinedBtn{
-    @apply cursor-pointer drop-shadow-lg shadow-violet-300 border-2 border-violet-700 rounded-full sm:text-lg text-white text-center w-32 sm:w-36 py-3
+  .filledBtn {
+    @apply cursor-pointer drop-shadow-lg shadow-violet-300 bg-violet-700 rounded-full sm:text-lg text-white text-center w-32 sm:w-36 py-3;
+  }
+  .outlinedBtn {
+    @apply cursor-pointer drop-shadow-lg shadow-violet-300 border-2 border-violet-700 rounded-full sm:text-lg text-white text-center w-32 sm:w-36 py-3;
+  }
+  .header {
+    @apply text-rose-500 text-center font-semibold font-dancing text-5xl  md:text-6xl capitalize my-3 md:mt-6 md:mb-10;
+  }
+  .inputStyle {
+    @apply w-full sm:w-full rounded-md px-4 py-2.5 mb-5  bg-transparent border border-violet-400 outline-none;
   }
 }
