@@ -6,15 +6,16 @@ import ScrollToTopBtn from '@/components/common/ScrollToTopBtn'
 import { Toaster } from 'react-hot-toast'
 
 
-export const metadata: Metadata = { 
+export const metadata: Metadata = {
   title: {
     default: "Portfolio",
     template: "%s | Swadesh Pal"
   },
-  description: "Create by Swadesh Pal, Student of Jalpaiguri Government Engineering College in Information Technology Department. Full Stack MERN & NextJs Developer and React Native Developer also.",
-  // twitter: {
-  //   description: "Hello, I am  Swadesh Pal, Student of Jalpaiguri Government Engineering College in Information Technology Department. Full Stack MERN & NextJs Developer and React Native Developer also.",
-  // }
+  description: "Hello, I am  Swadesh Pal, Student of Jalpaiguri Government Engineering College in Information Technology Department. Full Stack MERN & NextJs Developer and React Native Developer also.",
+  twitter: {
+    description: "Hello, I am  Swadesh Pal, Student of Jalpaiguri Government Engineering College in Information Technology Department. Full Stack MERN & NextJs Developer and React Native Developer also.",
+    card: "summary_large_image"
+  }
 }
 
 export default function RootLayout({

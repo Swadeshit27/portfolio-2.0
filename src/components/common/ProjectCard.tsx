@@ -8,7 +8,7 @@ import { FaGithub } from 'react-icons/fa6'
 import { IoMdDisc } from "react-icons/io";
 import { AnimationData } from '@/utils/animation'
 
-const ProjectCard = ({ project }: { project: ProjectsListType }) => {
+const ProjectCard = ({ project, key }: { project: ProjectsListType, key: number }) => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [isAnimated, setIsAnimated] = useState(false);
 
@@ -19,7 +19,15 @@ const ProjectCard = ({ project }: { project: ProjectsListType }) => {
         }
     }
     return (
-        <motion.div   {...AnimationData.popUp} className='flip-card w-full max-w-md mx-auto h-[20rem] rounded-md cursor-pointer' onClick={handelFlip}>
+        <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "linear", duration: 0.5, delay: key * 0.2 }}
+            className='flip-card w-full max-w-md mx-auto h-[20rem] rounded-md cursor-pointer' onClick={handelFlip}
+            // onMouseEnter={handelFlip}
+        >
+
             <motion.div
                 className='flip-card-inner w-full h-full  rounded-md gradient flex justify-center items-center'
                 initial={false}
@@ -43,15 +51,15 @@ const ProjectCard = ({ project }: { project: ProjectsListType }) => {
                     </div>
                 </div>
                 <div className=' flip-card-back w-[99%] h-[99%] bg-gray-800/70 backdrop-blur-md rounded-md p-2 sm:p-4 relative'>
-                    <p className='text-base text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem temporibus, aliquam hic nisi, repellendus illo quae ut perspiciatis tempora sint fugit? Incidunt temporibus voluptatem numquam aspernatur autem eligendi optio deserunt?</p>
+                    <p className='text-base text-white'>{project.details}</p>
                     <div className="w-full px-8 flex justify-between mt-5 left-0 absolute bottom-4">
                         {/* <button className='px-6 py-2 bg-slate-50'>learn more</button> */}
-                        <Link href={project.codeUrl}>
-                            <FaGithub size={25} className={"opacity-70 cursor-pointer hover:text-blue-500"} />
+                        <Link href={project.codeUrl} target='__blank'>
+                            <FaGithub size={25} className={"opacity-70 cursor-pointer hover:text-green-500"} />
                         </Link>
-                        <Link href={project.demoUrl}>
-                            <FaGlobeAmericas size={25} className={"opacity-70 cursor-pointer hover:text-blue-500"} />
-                        </Link>
+                        {project.demoUrl && <Link href={project.demoUrl} target='__blank'>
+                            <FaGlobeAmericas size={25} className={"opacity-70 cursor-pointer hover:text-green-500"} />
+                        </Link>}
                     </div>
                 </div>
             </motion.div>

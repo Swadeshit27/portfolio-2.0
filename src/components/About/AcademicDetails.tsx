@@ -15,15 +15,15 @@ import Subheading from "@/components/common/Subheading";
 const AcademicDetails = () => {
     return (
         <>
-            <Subheading subtitle="Academic Details" className="header text-5xl text-rose-500  capitalize mt-20 mb-10" />
+            <Subheading subtitle="Academic Details" className="header text-4xl md:text-5xl text-rose-500  capitalize mt-20 mb-10" />
             <div className="w-full max-w-7xl h-full  mx-auto relative pb-20">
-                <div className="h-[45rem] w-[10px] bg-white mx-auto absolute max-lg:left-12 lg:left-[50%] -z-10 rounded-full"></div>
+                <div className="h-[45rem] w-[10px] bg-white mx-auto absolute max-lg:left-8 lg:left-[50%] -z-10 rounded-full"></div>
                 {EducationList.map((item) => {
                     const { date, title, details, isReverse, result } = item;
                     return (
                         <motion.div
                             key={title}
-                            className={`flex justify-end min-h-[12rem] lg:w-1/2  pt-12 font-libre  translate-x-3 gap-x-4 ${!isReverse ? " max-lg:flex-row-reverse lg:translate-x-11" : " lg:-translate-x-9 lg:ms-auto  flex-row-reverse"
+                            className={`flex justify-end min-h-[12rem] lg:w-1/2  pt-12 font-libre  -translate-x-0.5 gap-x-4 ${!isReverse ? " max-lg:flex-row-reverse lg:translate-x-11" : " lg:-translate-x-9 lg:ms-auto  flex-row-reverse"
                                 }`}
                         >
                             <motion.div
@@ -31,7 +31,7 @@ const AcademicDetails = () => {
                                 whileInView={{ x: 0, y: 0, opacity: 1 }}
                                 transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut", type: "spring" }}
                                 viewport={{ once: true }}
-                                className="w-full  max-w-lg min-h-[8rem] rounded-lg bg-violet-700 me-3 sm:mx-4 relative p-3 sm:px-6 sm:py-4">
+                                className="w-full  max-w-lg min-h-[8rem] rounded-lg bg-violet-700     relative p-3 sm:px-6 sm:py-4">
                                 <div
                                     className={`absolute  top-8 border-solid   border-y-transparent border-y-8 ${!isReverse
                                         ? "lg:reverse_box max-lg:left_arrow  "

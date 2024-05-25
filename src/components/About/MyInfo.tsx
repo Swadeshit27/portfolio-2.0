@@ -1,22 +1,17 @@
-"use client";
 
 import React from "react";
 import Image from "next/image";
 import myPhoto from "@/assets/myphoto.png";
 import HireResumeBtn from "@/components/common/HireResumeBtn";
-import { motion } from "framer-motion";
-import { AnimationData } from "@/utils/animation";
 import { CodingProfiles, PersonalDetails } from "@/utils/Education";
 import Link from "next/link";
+import { PopUpAnimation, RotateAnimation, SlideUpAnimation } from "@/utils/AnimationDiv";
 
 const MyInfo = () => {
     return (
         <>
-            <div className="w-full max-w-[1200px] h-full flex max-md:flex-col justify-between mx-auto mb-12">
-                <motion.div
-                    {...AnimationData.slideUp}
-                    className="w-[90%] mx-auto md:w-[50%] min-h-[60vh] h-full  font-libre max-md:order-2"
-                >
+            <div className="w-full max-w-[1200px] h-full flex max-md:flex-col justify-between mx-auto mb-6 md:mb-12   md:mt-24">
+                <SlideUpAnimation className="max-md:order-2 w-full md:w-3/5 min-h-[60vh] h-full font-libre ">
                     <p className="text-sm sm:text-lg font-semibold text-yellow-500 w-full">
                         Hello, I&apos;m 👋
                     </p>
@@ -35,15 +30,13 @@ const MyInfo = () => {
                         contribution
                     </p>
                     <HireResumeBtn />
-                </motion.div>
-                <div className="md:w-[50%] h-full relative flex  justify-center max-md:order-1 max-md:my-12">
-                    <motion.div
-                        {...AnimationData.rotateLeft}
-                        className="w-[15rem] sm:w-[20rem] h-[17rem] sm:h-[20rem] bg-gradient-to-b from-rose-500 to-violet-500 rounded-lg mx-auto rotate-[8deg]"
-                    ></motion.div>
-                    <motion.div
-                        {...AnimationData.rotateRight}
-                        className=" absolute top-0 w-[15rem] sm:w-[20rem] h-[17rem] sm:h-[20rem] mx-auto rounded-lg"
+                </SlideUpAnimation>
+                <div className={"md:w-1/4 h-full relative flex  justify-center max-md:order-1 max-md:my-12"}>
+                    <div
+                        className="w-[15rem] min-w-[15rem] sm:w-[18rem] h-[17rem] sm:h-[20rem] bg-gradient-to-b from-rose-500 to-violet-500 rounded-lg mx-auto rotate-[8deg] "
+                    ></div>
+                    <div
+                        className=" absolute top-0 w-[15rem] sm:w-[18rem] h-[17rem] sm:h-[20rem] mx-auto rounded-lg"
                     >
                         <Image
                             src={myPhoto}
@@ -52,11 +45,11 @@ const MyInfo = () => {
                             height={150}
                             className="w-full h-full rounded-lg object-cover"
                         />
-                    </motion.div>
+                    </div>
                 </div>
             </div>
-            <motion.div {...AnimationData.slideUp} className="flex flex-wrap gap-x-16 font-libre">
-                <div>
+            <div className="flex flex-wrap gap-x-16 font-libre">
+                <PopUpAnimation>
                     <h1 className="text-xl sm:text-2xl text-green-500 font-semibold my-4">
                         Personal Details:
                     </h1>
@@ -68,8 +61,8 @@ const MyInfo = () => {
                             </li>
                         ))}
                     </ul>
-                </div>
-                <div>
+                </PopUpAnimation>
+                <PopUpAnimation>
                     <h1 className="text-xl sm:text-2xl text-green-500 font-semibold my-4">
                         Coding Profiles:
                     </h1>
@@ -82,8 +75,8 @@ const MyInfo = () => {
                             </li>
                         ))}
                     </ul>
-                </div>
-                <div>
+                </PopUpAnimation>
+                <PopUpAnimation>
                     <h1 className="text-xl sm:text-2xl text-green-500 font-semibold my-4 capitalize">
                         language proficiency :-
                     </h1>
@@ -105,8 +98,8 @@ const MyInfo = () => {
                             ( Full professional proficiency )
                         </span>
                     </h2>
-                </div>
-            </motion.div>
+                </PopUpAnimation>
+            </div>
         </>
     );
 };

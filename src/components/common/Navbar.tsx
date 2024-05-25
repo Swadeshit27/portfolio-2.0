@@ -1,19 +1,33 @@
 "use client"
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { FaGithub, FaInstagram, FaSquareFacebook, FaTwitter } from 'react-icons/fa6'
-import { BsLinkedin } from 'react-icons/bs' 
+import { BsLinkedin } from 'react-icons/bs'
 import { usePathname } from 'next/navigation';
 import { NavItemList } from '@/utils/NavItems';
 
 const Navbar = (): JSX.Element => {
     const [open, setOpen] = useState(false);
     const pathname = usePathname();
+    const [isShadow, setIsShadow] = useState(true);
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         if (window.scrollY >= 50) {
+    //             setIsShadow(true)
+    //         } else {
+    //             setIsShadow(false)
+    //         }
+    //     }
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     }
+    // }, []);
     return (
         <>
-            <div className={`w-full h-20  fixed z-50 top-0  bg-[#1C2434]  backdrop-blur-md flex justify-between items-center px-4 sm:px-12 shadow-md shadow-[#3a3a3a]`}>
+            <div className={`w-full h-20  fixed z-50 top-0   flex justify-between items-center px-4 sm:px-12 ${isShadow && " bg-[#1C2434]  shadow-md shadow-[#3a3a3a]  transition-all ease-in-out duration-300"}`}>
                 <Link href={"/"}>
                     <h1 className=' cursor-pointer font-dancing text-3xl capitalize'>swadesh pal</h1>
                 </Link>
@@ -29,8 +43,8 @@ const Navbar = (): JSX.Element => {
                     ))}
                 </ul>
             </div>
-            {open && <div className='w-full h-full bg-gray-400/50 uppercase md:hidden fixed top-0  z-50'>
-                <div className={`w-4/5  h-full  gradient uppercase  fixed top-0  z-50  flex justify-center items-center ${open ? "translate-x-0  transition-all ease-linear duration-500 " :"-translate-x-[100%]  transition-all ease-linear duration-500"} `}>
+            {open && <div className='w-full h-full bg-gray-400/50 uppercase md:hidden fixed top-0  z-50 transition-all ease-linear duration-500'>
+                <div className={`w-4/5  h-full  gradient uppercase  fixed top-0  z-50  flex justify-center items-center ${open ? "left-0  transition-all ease-linear duration-500 " : "-left-[100%]  transition-all ease-linear duration-500"} `}>
                     <div className='w-[98%] h-[99%] bg-gray-800/80 p-6   '>
                         <div className='float-right translate-x-4 -translate-y-4'>
                             <RxCross2 size={30} onClick={() => setOpen(false)} />

@@ -4,7 +4,7 @@ export const EducationList: EducationDetailsType[] = [
   {
     date: "2021-2025",
     title: "B.Tech In IT",
-    details: "I am a 3rd Year B.Tech student of Jalpaiguri Government Engineering College(Autonomous) in Information Technology Department.I got 8.50 YGPA till 4th sem.",
+    details: "I am pursuing B.Tech from Jalpaiguri Government Engineering College (Autonomous) in Information Technology Department.I got 8.68 YGPA till 5th sem.",
     isReverse: false
   },
   {

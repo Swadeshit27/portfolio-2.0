@@ -50,6 +50,9 @@ body {
 }
 
 @layer base {
+  .layout{
+    @apply w-full max-w-screen-xl px-8 mx-auto
+  }
   .activeBtn {
     @apply bg-violet-500;
   }
@@ -73,5 +76,8 @@ body {
   }
   .inputStyle {
     @apply w-full sm:w-full rounded-md px-4 py-2.5 mb-5  bg-transparent border border-violet-400 outline-none;
+  }
+  .projectBtn{
+    @apply   border  rounded-md  font-libre font-medium   
   }
 }
