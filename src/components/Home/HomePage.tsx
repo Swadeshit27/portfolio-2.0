@@ -28,7 +28,8 @@ const HomePage = (): JSX.Element => {
                     />
                 </p>
                 <div className='flex gap-x-8 my-6 font-libre'>
-                    <Link target='__blank' href={"https://cloud.appwrite.io/v1/storage/buckets/66241b72624e71cbcd6a/files/66435eeb002084a85efa/view?project=662415d3bdf8f8d8078b&mode=admin"}>
+                    <Link target='__blank' 
+                        href={"https://cloud.appwrite.io/v1/storage/buckets/66241b72624e71cbcd6a/files/669cb91f0026a17e4441/view?project=662415d3bdf8f8d8078b&mode=admin"}>
                         <motion.button {...AnimationData.zoomInOut} className='filledBtn'>Resume</motion.button>
                     </Link>
                     <Link href={"/contact"}>
