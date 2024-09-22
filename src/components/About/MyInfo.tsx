@@ -2,34 +2,47 @@
 import React from "react";
 import Image from "next/image";
 import myPhoto from "@/assets/myphoto.png";
-import HireResumeBtn from "@/components/common/HireResumeBtn";
-import { CodingProfiles, PersonalDetails } from "@/utils/Education";
 import Link from "next/link";
-import { PopUpAnimation, RotateAnimation, SlideUpAnimation } from "@/utils/AnimationDiv";
+import { PopUpAnimation, SlideUpAnimation } from "@/utils/AnimationDiv";
+import myInfoService from "@/appwrite/myinfo";
+import Button from "../common/button";
+import fileService from "@/appwrite/file";
 
-const MyInfo = () => {
+const MyInfo = async () => {
+    const data: any = await myInfoService.getAllInfo();
+    const myInfo: infoProps = data.documents[0];
     return (
-        <>
-            <div className="w-full max-w-[1200px] h-full flex max-md:flex-col justify-between mx-auto mb-6 md:mb-12   md:mt-24">
+        <section className="py-16 sm:py-24 ">
+            <div className="layout h-full flex max-md:flex-col justify-between mx-auto pb-12">
                 <SlideUpAnimation className="max-md:order-2 w-full md:w-3/5 min-h-[60vh] h-full font-libre ">
-                    <p className="text-sm sm:text-lg font-semibold text-yellow-500 w-full">
+                    <p className="text-sm sm:text-lg font-semibold text-yellow-500 w-full mb-2">
                         Hello, I&apos;m 👋
                     </p>
-                    <h1
+                    {/* <h1
                         className={`text-3xl sm:text-5xl font-[600] my-2 text-violet-600`}
                     >
-                        Swadesh Pal
-                    </h1>
+                        {myInfo?.name || "Swadesh Pal"}
+                    </h1> */}
                     <p className="opacity-75 max-sm:text-sm">
-                        I am a passionate and driven individual pursuing a Bachelor of
-                        Technology degree in Information Technology from Jalpaiguri
-                        Government Engineering College in Jalpaiguri, West Bengal. I am a
-                        Full MERN stack developer with expertise in data structures and
-                        algorithms. I have developed web applications using React, Node.js,
-                        Express.js, and MongoDB. I am very much interested in open source
-                        contribution
+                        {myInfo?.homeDescription || "I am a passionate and driven individual pursuing a Bachelor of Technology degree in Information Technology from Jalpaiguri Government Engineering College in Jalpaiguri, West Bengal. I am a Full MERN stack developer with expertise in data structures and algorithms. I have developed web applications using React, Node.js, Express.js, and MongoDB. I am very much interested in open source contribution"}
                     </p>
-                    <HireResumeBtn />
+                    <div className="flex gap-x-8 my-6">
+                        <Button
+                            text="Resume"
+                            isLink={true}
+                            size="lg"
+                            link={myInfo?.resume ||
+                                "https://cloud.appwrite.io/v1/storage/buckets/66241b72624e71cbcd6a/files/66435eeb002084a85efa/view?project=662415d3bdf8f8d8078b&mode=admin"
+                            }
+                        />
+                        <Button
+                            text="Hire Me"
+                            path="/contact"
+                            variant="outline"
+                            size="lg"
+                            isNavigate={true}
+                        />
+                    </div>
                 </SlideUpAnimation>
                 <div className={"md:w-1/4 h-full relative flex  justify-center max-md:order-1 max-md:my-12"}>
                     <div
@@ -39,7 +52,9 @@ const MyInfo = () => {
                         className=" absolute top-0 w-[15rem] sm:w-[18rem] h-[17rem] sm:h-[20rem] mx-auto rounded-lg"
                     >
                         <Image
-                            src={myPhoto}
+                            src={
+                                myInfo ? String(fileService.getFilePreview(myInfo.aboutImg as string)) : myPhoto
+                            }
                             alt="photo"
                             width={150}
                             height={150}
@@ -50,57 +65,107 @@ const MyInfo = () => {
             </div>
             <div className="flex flex-wrap gap-x-16 font-libre">
                 <PopUpAnimation>
-                    <h1 className="text-xl sm:text-2xl text-green-500 font-semibold my-4">
-                        Personal Details:
-                    </h1>
-                    <ul className="sm:text-lg font-medium ms-4">
-                        {PersonalDetails.map((item) => (
-                            <li key={item.key} className="text-violet-500">
-                                {item.key} :{" "}
-                                <span className="text-blue-500">{item.value}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </PopUpAnimation>
-                <PopUpAnimation>
-                    <h1 className="text-xl sm:text-2xl text-green-500 font-semibold my-4">
-                        Coding Profiles:
-                    </h1>
-                    <ul className="sm:text-[16px] font-medium ms-4">
-                        {CodingProfiles.map((item) => (
-                            <li key={item.name} className="text-violet-500 hover:underline">
-                                <Link target="__blank" href={item.path}>
-                                    {item.name}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </PopUpAnimation>
-                <PopUpAnimation>
-                    <h1 className="text-xl sm:text-2xl text-green-500 font-semibold my-4 capitalize">
+                    <h1 className="text-xl sm:text-2xl text-green-500 font-medium my-4 capitalize">
                         language proficiency :-
                     </h1>
-                    <h2 className="sm:text-lg font-libre ms-4 mb-2 capitalize">
+                    <h2 className="sm:text-base   ms-4 mb-2 capitalize">
                         bengali{" "}
                         <span className=" opacity-75 text-sm">
                             ( Full professional proficiency )
                         </span>
                     </h2>
-                    <h2 className="sm:text-lg font-libre ms-4 mb-2 capitalize">
+                    <h2 className="sm:text-base  ms-4 mb-2 capitalize">
                         english{" "}
                         <span className=" opacity-75 text-sm">
                             ( Full professional proficiency )
                         </span>
                     </h2>
-                    <h2 className="sm:text-lg font-libre ms-4 mb-2 capitalize">
+                    <h2 className="sm:text-base  ms-4 mb-2 capitalize">
                         hindi{" "}
                         <span className=" opacity-75 text-sm">
                             ( Full professional proficiency )
                         </span>
                     </h2>
                 </PopUpAnimation>
+                <PopUpAnimation>
+                    <h1 className="text-xl sm:text-2xl text-green-500 font-medium my-4">
+                        Personal Details:
+                    </h1>
+                    <ul className="sm:text-base font-medium ms-4 space-y-2">
+                        <li className="text-violet-400">
+                            Date Of Birth :{" "}
+                            <span className="text-gray-100">01/03/2002</span>
+                        </li>
+                        <li className="text-violet-400">
+                            City :{" "}
+                            <span className="text-gray-100">Bishnupur</span>
+                        </li>
+                        <li className="text-violet-400">
+                            Email :{" "}
+                            <span className="text-gray-100">
+                                {myInfo?.email || "swadeshpal2002@gmail.com"}
+                            </span>
+                        </li>
+                        <li className="text-violet-400">
+                            Phone :{" "}
+                            <span className="text-gray-100">
+                                {myInfo?.mobile || "8436893969"}
+                            </span>
+                        </li>
+                    </ul>
+                </PopUpAnimation>
+                <PopUpAnimation>
+                    <h1 className="text-xl sm:text-2xl text-green-500 font-medium my-4">
+                        Coding Profiles:
+                    </h1>
+                    <ul className="sm:text-base font-medium ms-4 space-y-2">
+                        {myInfo?.leetcode &&
+                            <li className="text-violet-400 hover:underline">
+                                <Link target="__blank" href={myInfo.leetcode}>
+                                    LeetCode
+                                </Link>
+                            </li>
+                        }
+                        {myInfo?.codestudio &&
+                            <li className="text-violet-400 hover:underline">
+                                <Link target="__blank" href={myInfo.codestudio}>
+                                    CodeStudio
+                                </Link>
+                            </li>
+                        }
+                        {myInfo?.geekforgeeks &&
+                            <li className="text-violet-400 hover:underline">
+                                <Link target="__blank" href={myInfo.geekforgeeks}>
+                                    GeekForGeeks
+                                </Link>
+                            </li>
+                        }
+                        {myInfo?.codeforces &&
+                            <li className="text-violet-400 hover:underline">
+                                <Link target="__blank" href={myInfo.codeforces}>
+                                    CodeForces
+                                </Link>
+                            </li>
+                        }
+                        {myInfo?.codechef &&
+                            <li className="text-violet-400 hover:underline">
+                                <Link target="__blank" href={myInfo.codechef}>
+                                    CodeChef
+                                </Link>
+                            </li>
+                        }
+                        {myInfo?.hackerrank &&
+                            <li className="text-violet-400 hover:underline">
+                                <Link target="__blank" href={myInfo.hackerrank}>
+                                    HackerRank
+                                </Link>
+                            </li>
+                        }
+                    </ul>
+                </PopUpAnimation>
+
             </div>
-        </>
+        </section>
     );
 };
 

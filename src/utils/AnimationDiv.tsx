@@ -9,6 +9,7 @@ import myPhoto from "@/assets/myphoto.png";
 type props = {
   children: React.ReactNode;
   className?: string;
+  isReverse?: boolean;
 };
 
 export const SlideUpAnimation: React.FC<props> = ({ children, className }) => {
@@ -35,6 +36,35 @@ export const SlideLeftAnimation: React.FC<props> = ({
     </motion.div>
   );
 };
+
+export const SlideTopLeftAnimation: React.FC<props> = ({
+  children,
+  className,
+}) => {
+  return (
+    <motion.div {...AnimationData.slideTopLeft} className={className}>
+      {children}
+    </motion.div>
+  );
+}
+
+export const EducationCardAnimation: React.FC<props> = ({
+  children,
+  className,
+  isReverse,
+}) => {
+  return (
+    <motion.div
+      initial={{ x: isReverse ? 50 : -50, y: isReverse ? 50 : -50, opacity: 0 }}
+      whileInView={{ x: 0, y: 0, opacity: 1 }}
+      transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut", type: "spring" }}
+      viewport={{ once: true }}
+      className={`w-full  max-w-lg min-h-[8rem] rounded-lg bg-violet-700     relative p-3  sm:p-4 ${className}`}>
+      {children}
+    </motion.div>
+  );
+}
+
 export const RotateAnimation = () => {
   return (
     <div className={"md:w-1/4 h-full relative flex  justify-center max-md:order-1 max-md:my-12"}>

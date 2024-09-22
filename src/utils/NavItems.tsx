@@ -16,6 +16,11 @@ export const NavItemList: ItemsType[] = [
     icon: <IoMdContact  size={18} />
   },
   {
+    name: "Experience",
+    path: "/experience",
+    icon: <IoMdContact  size={18} />
+  },
+  {
     name: "projects",
     path: "/projects",
     icon: <IoSettingsSharp  size={18} />

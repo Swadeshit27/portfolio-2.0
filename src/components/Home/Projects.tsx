@@ -1,31 +1,40 @@
 
-import React from 'react'
-import { ProjectList } from "@/utils/Projects"
+import React from 'react' 
 import ProjectCard from '@/components/common/ProjectCard'
-import Layout from '../common/Layout'
-import Link from 'next/link'
+import Layout from '../common/Layout' 
+import projectService from '@/appwrite/projects'
+import Button from '../common/button' 
 
 
-const Projects = (): JSX.Element => {
+const Projects = async () => {
+    const data: any = await projectService.getAllProject();
+    const projects: projectProps[] = data?.documents.reverse();
+
     return (
-        <Layout title='Projects'>
-            <div className='w-full h-full grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12'>
-                {
-                    ProjectList.filter(items => items?.isBest === true).map((project, i) => {
-                        return (
-                            <ProjectCard project={project} key={i} />
-                        )
-                    })
-                }
-            </div>
-            <div className='flex justify-center mt-8'>
-                <Link href={'/projects'}>
-                    <button className=' btn border-none hover:bg-violet-800 w-40  rounded-full  mx-auto  py-2 bg-violet-800 text-white  text-base font-medium font-libre text-center'>
-                        Views More
-                    </button>
-                </Link>
-            </div>
-        </Layout>
+        <>
+            {
+                projects &&
+                projects.length > 0 &&
+                <Layout title='Projects' titleImg='/projects.png'>
+                    <div className='w-full h-full grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12'>
+                        {
+                            projects.filter(items => items.best === true).map((project, i) => {
+                                return (
+                                    <ProjectCard project={project} key={i} />
+                                )
+                            })
+                        }
+                    </div>
+                    <div className='flex justify-center mt-8'> 
+                        <Button
+                            text='View More'
+                            link='/projects'
+                            isNavigate={true}
+                        />
+                    </div>
+                </Layout>
+            }
+        </>
     )
 }
 

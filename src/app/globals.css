@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Libre+Baskerville&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,9 +6,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  scroll-behavior: smooth !important;
+  box-sizing: border-box; 
 }
 *::-webkit-scrollbar {
   display: none;
@@ -72,12 +67,12 @@ body {
     @apply cursor-pointer drop-shadow-lg shadow-violet-300 border-2 border-violet-700 rounded-full sm:text-lg text-white text-center w-32 sm:w-36 py-3;
   }
   .header {
-    @apply text-rose-500 text-center font-semibold font-dancing text-5xl  md:text-6xl capitalize my-3 md:mt-6 md:mb-10;
+    @apply text-rose-500 text-center font-semibold  text-5xl  md:text-6xl capitalize my-3 md:mt-6 md:mb-10;
   }
   .inputStyle {
     @apply w-full sm:w-full rounded-md px-4 py-2.5 mb-5  bg-transparent border border-violet-400 outline-none;
   }
   .projectBtn{
-    @apply   border  rounded-md  font-libre font-medium   
+    @apply   border  rounded-md   font-medium   
   }
 }

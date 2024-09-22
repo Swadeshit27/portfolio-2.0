@@ -26,8 +26,8 @@ export const AnimationData = {
         whileInView: { y: 0, opacity: 1 },
         viewport: { once: true },
         transition: {
-            duration: 1,
-            delay:0.3,
+            duration: 0.6,
+            delay:0.1,
             ease: "easeInOut",
         },
     }, 
@@ -55,8 +55,8 @@ export const AnimationData = {
         whileInView: { y: 0, opacity: 1 },
         viewport: { once: true },
         transition: {
-            duration: 1,
-            delay: 0.3,
+            duration: 0.5,
+            delay: 0.1,
             ease: "easeInOut",
             type: 'spring'
         },
@@ -72,7 +72,7 @@ export const AnimationData = {
             type: 'spring'
         },
     },
-    slideRightBottom: {
+    slideTopLeft: {
         initial: { y: 50, x: 50, opacity: 0 },
         whileInView: { y: 0, x: 0, opacity: 1 },
         viewport: { once: true },

@@ -7,7 +7,12 @@ import { AnimationData } from '@/utils/animation'
 const Subheading = ({ subtitle, className }: { subtitle: string, className?: string }) => {
     return (
         <>
-            <motion.h1 {...AnimationData.lightPopUp} className={`header text-2xl xs:text-3xl md:text-4xl font-semibold text-green-500 ${className}`} >{subtitle}</motion.h1>
+            <motion.h1
+                {...AnimationData.lightPopUp}
+                className={`xs:text-xl md:text-2xl font-medium text-green-500 ${className}`}
+            >
+                {subtitle}
+            </motion.h1>
         </>
     )
 }
