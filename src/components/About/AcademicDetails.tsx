@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 import education from "@/assets/education.png"; 
 import Subheading from "@/components/common/Subheading";
-import { EducationCardAnimation } from "@/utils/AnimationDiv";
-import educationService from "@/appwrite/education";
+import { EducationCardAnimation } from "@/utils/AnimationDiv"; 
 import Button from "../common/button";
 import { Calendar } from "lucide-react"; 
+import { getEducationDetails } from "@/app/libs/action";
 
 const AcademicDetails = async () => {
-    const data: any = await educationService.getAllEducation();
+    const data: any = await getEducationDetails();
     const educations: educationProps[] = data.documents;
     return (
         <>

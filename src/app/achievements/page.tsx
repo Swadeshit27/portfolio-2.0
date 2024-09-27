@@ -4,10 +4,10 @@ import AchievementGif from "@/assets/achievement.gif";
 import Image from "next/image";
 import { FaAward } from "react-icons/fa6";
 import { SlideUpAnimation } from "@/utils/AnimationDiv";
-import { Metadata } from "next";
-import achievementService from "@/appwrite/achievements";
+import { Metadata } from "next"; 
 import Link from "next/link";
 import fileService from "@/appwrite/file"; 
+import { getAchievements } from "../libs/action";
 
 export const metadata: Metadata = {
     title: "Achievements ",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 }
 
 const Achievements = async () => {
-    const data: any = await achievementService.getAllAchievements();
+    const data: any = await getAchievements();
     const achievements: AchievementProps[] = data.documents.reverse();
     return (
         <Layout>

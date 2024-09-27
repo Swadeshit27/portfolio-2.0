@@ -1,8 +1,8 @@
 
 import React from "react";
 import SkillsIcons from "./SkillsIcons";
-import Layout from "../common/Layout";
-import skillsService from "@/appwrite/skills";
+import Layout from "../common/Layout"; 
+import { getSkills } from "@/app/libs/action";
 export const revalidate = process.env.NEXT_PUBLIC_REVALIDATE_TIME;
 
 const SkillsCategory = [
@@ -38,7 +38,7 @@ const SkillsCategory = [
 
 
 const Skills = async () => {
-    const data: any = await skillsService.getAllSkills();
+    const data: any = await getSkills();
     const skills: SkillProps[] = data?.documents; 
     return (
         <>

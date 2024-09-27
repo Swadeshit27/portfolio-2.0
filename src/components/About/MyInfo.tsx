@@ -3,14 +3,15 @@ import React from "react";
 import Image from "next/image";
 import myPhoto from "@/assets/myphoto.png";
 import Link from "next/link";
-import { PopUpAnimation, SlideUpAnimation } from "@/utils/AnimationDiv";
-import myInfoService from "@/appwrite/myinfo";
+import { PopUpAnimation, SlideUpAnimation } from "@/utils/AnimationDiv"; 
 import Button from "../common/button";
-import fileService from "@/appwrite/file";
+import fileService from "@/appwrite/file"; 
+import { getMyInfo } from "@/app/libs/action";
 
 const MyInfo = async () => {
-    const data: any = await myInfoService.getAllInfo();
+    const data: any = await getMyInfo(); 
     const myInfo: infoProps = data.documents[0];
+
     return (
         <section className="py-10 sm:py-24 ">
             <div className="w-full h-full flex max-md:flex-col justify-between mx-auto pb-6 xs:pb-10">
@@ -24,7 +25,7 @@ const MyInfo = async () => {
                         {myInfo?.name || "Swadesh Pal"}
                     </h1> */}
                     <p className=" max-sm:text-sm">
-                        {myInfo?.homeDescription || "I am a passionate and driven individual pursuing a Bachelor of Technology degree in Information Technology from Jalpaiguri Government Engineering College in Jalpaiguri, West Bengal. I am a Full MERN stack developer with expertise in data structures and algorithms. I have developed web applications using React, Node.js, Express.js, and MongoDB. I am very much interested in open source contribution"}
+                        {myInfo?.aboutDescription}
                     </p>
                     <div className="flex gap-x-8 my-6">
                         <Button
@@ -42,7 +43,7 @@ const MyInfo = async () => {
                             variant="outline"
                             size="lg"
                             isNavigate={true}
-                            className="!border-violet-400 !text-violet-400 max-xxs:px-6 max-xxs:py-2 max-xxs:text-sm" 
+                            className="!border-violet-400 !text-violet-400 max-xxs:px-6 max-xxs:py-2 max-xxs:text-sm"
                         />
                     </div>
                 </SlideUpAnimation>

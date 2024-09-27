@@ -1,15 +1,15 @@
 import Image from "next/image";
 import React from "react";
-import Photo2 from "@/assets/photo2.png";
-import myInfoService from "@/appwrite/myinfo";
+import Photo2 from "@/assets/photo2.png"; 
 import fileService from "@/appwrite/file";
 import TypewriteEffect from "./TypewriteEffect";
 import Button from "../common/button";
 import { SlideUpAnimation } from "@/utils/AnimationDiv";
 import SocialIcons from "./SocialIcons"; 
+import { getMyInfo } from "@/app/libs/action";
 
 const HomePage = async () => {
-    const data: any = await myInfoService.getAllInfo();
+    const data: any = await getMyInfo();
     const myInfo: infoProps = data.documents[0]; 
 
     return (

@@ -6,8 +6,8 @@ import Layout from "@/components/common/Layout";
 import Link from "next/link";
 import ContactForm from "@/components/Contacts/ContactForm";
 import { SlideLeftAnimation, SlideUpAnimation } from "@/utils/AnimationDiv";
-import { Metadata } from "next";
-import myInfoService from "@/appwrite/myinfo"; 
+import { Metadata } from "next"; 
+import { getMyInfo } from "../libs/action";
 
 export const metadata: Metadata = {
     title: "Contact Me ",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 }
 
 const Contact = async () => {
-    const data: any = await myInfoService.getAllInfo();
+    const data: any = await getMyInfo();
     const info: infoProps = data.documents[0];
     return (
         <>

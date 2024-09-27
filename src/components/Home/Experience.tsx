@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import Layout from "../common/Layout"; 
-import experienceService from "@/appwrite/experience";
+import Layout from "../common/Layout";  
 import AllExperiences from "./AllExperiencesCard";
+import { getExperiences } from "@/app/libs/action";
 
 type props = {
     isHeaderVisible?: boolean;
@@ -16,7 +16,7 @@ const Experience: FC<props> = async ({
     heading = "Work Experience",
     headingImg = "/job.png", 
 }) => {
-    const data: any = await experienceService.getAllExperience();
+    const data: any = await getExperiences();
     const experiences: ExperienceProps[] = data?.documents.reverse();
     return (
         <>

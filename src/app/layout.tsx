@@ -9,8 +9,7 @@ import { Space_Mono } from "next/font/google"
 import AnimatedBoxes from '@/components/animated-boxes'
 import { Suspense } from 'react'
 import Loading from './loading'
-import Footer from '@/components/common/Footer'
-import { revalidate } from './revalidate'
+import Footer from '@/components/common/Footer' 
 
 const spaceMono = Space_Mono({
   weight: "400",
@@ -42,9 +41,7 @@ export const metadata: Metadata = {
     url: "https://portfolio-swadesh-pal.vercel.app",
     type: "website",
   }
-}
-
-revalidate()
+} 
 export default function RootLayout({
   children,
 }: {

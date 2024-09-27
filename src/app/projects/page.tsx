@@ -2,8 +2,8 @@
 import React from 'react'
 import Layout from '@/components/common/Layout'
 import { Metadata } from 'next'
-import ProjectsOptions from '@/components/Projects/ProjectsOptions'
-import projectService from '@/appwrite/projects' 
+import ProjectsOptions from '@/components/Projects/ProjectsOptions' 
+import { getProjects } from '../libs/action'
 
 export const metadata: Metadata = {
     title: "Projects ",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 }
 
 const Projects = async () => {
-    const data: any = await projectService.getAllProject();
+    const data: any = await getProjects();
     const projects: projectProps[] = data.documents.reverse();
     return (
         <Layout >

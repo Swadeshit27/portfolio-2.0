@@ -1,13 +1,13 @@
 
 import React from 'react' 
 import ProjectCard from '@/components/common/ProjectCard'
-import Layout from '../common/Layout' 
-import projectService from '@/appwrite/projects'
+import Layout from '../common/Layout'  
 import Button from '../common/button' 
+import { getProjects } from '@/app/libs/action'
 
 
 const Projects = async () => {
-    const data: any = await projectService.getAllProject();
+    const data: any = await getProjects();
     const projects: projectProps[] = data?.documents.reverse();
 
     return (
