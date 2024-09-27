@@ -55,78 +55,7 @@ const Navbar = (): JSX.Element => {
                         </li>
                     ))}
                 </ul>
-            </div>
-            {/* {open && (
-                <div className="w-full h-full bg-gray-400/50 uppercase md:hidden fixed top-0  z-50 transition-all ease-linear duration-500">
-                    <div
-                        className={`w-4/5  h-full  gradient uppercase  fixed top-0  z-50  flex justify-center items-center ${open
-                                ? "left-0  transition-all ease-linear duration-500 "
-                                : "-left-[100%]  transition-all ease-linear duration-500"
-                            } `}
-                    >
-                        <div className="w-[98%] h-[99%] bg-gray-800/80 p-6   ">
-                            <div className="float-right translate-x-4 -translate-y-4">
-                                <RxCross2 size={30} onClick={() => setOpen(false)} />
-                            </div>
-                            <h1 className="mt-6 text-start font-dancing text-2xl">
-                                Swadesh pal
-                            </h1>
-                            <ul className="h-[20rem] mx-auto pt-12">
-                                {NavItemList.map((item, index) => (
-                                    <li
-                                        key={index}
-                                        className={`cursor-pointer  font-libre my-3 text- ${pathname === item.path && "text-green-500"
-                                            } `}
-                                    >
-                                        <Link
-                                            href={item.path}
-                                            className="flex items-center gap-x-2"
-                                            onClick={() => setOpen(false)}
-                                        >
-                                            {item.icon} {item.name}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className="w-4/5 mx-auto mt-8">
-                                <h1 className="text-sm text-center mb-2">follow me on</h1>
-                                <div className="w-full flex justify-between">
-                                    <div className="mx-2 cursor-pointer text-blue-400">
-                                        <Link href={"https://github.com/Swadeshit27"}>
-                                            {" "}
-                                            <FaGithub size={25} />
-                                        </Link>
-                                    </div>
-                                    <div className="mx-2 cursor-pointer text-blue-600">
-                                        <Link href={"https://www.linkedin.com/in/swadesh-pal/"}>
-                                            {" "}
-                                            <BsLinkedin size={25} />
-                                        </Link>
-                                    </div>
-                                    <div className="mx-2 cursor-pointer text-blue-500">
-                                        <Link href={""}>
-                                            {" "}
-                                            <FaSquareFacebook size={25} />
-                                        </Link>
-                                    </div>
-                                    <div className="mx-2 cursor-pointer text-rose-400">
-                                        <Link href={"https://www.instagram.com/_swadesh_pal"}>
-                                            {" "}
-                                            <FaInstagram size={25} />
-                                        </Link>
-                                    </div>
-                                    <div className="mx-2 cursor-pointer text-blue-400">
-                                        <Link href={"https://twitter.com/Swadesh_Pal27"}>
-                                            {" "}
-                                            <FaTwitter size={25} />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )} */}
+            </div> 
             <div
                 className={`drawer z-[9999] ${open ? "  drawer-open" : ""}`}
             >
@@ -170,11 +99,11 @@ const Navbar = (): JSX.Element => {
                                     <li
                                         key={index}
                                         className={`cursor-pointer my-1.5 ${pathname === item.path ? "text-green-500" : "text-white"}`}
+                                        onClick={() => setOpen(false)}
                                     >
                                         <Link href={item.path}>
                                             <span
-                                                className="flex items-center gap-x-2 text-base capitalize"
-                                                onClick={() => setOpen(false)}
+                                                className="flex items-center gap-x-2 text-base capitalize" 
                                             >
                                                 {item.icon} {item.name}
                                             </span>
