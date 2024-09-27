@@ -15,8 +15,8 @@ const SocialIcons: FC<infoProps> = ({
 }) => {
     return (
         <>
-            <div className="max-md:hidden w-16 bg-[#0000002d] shadow-md shadow-gray-600 backdrop-blur-md fixed top-[30%] right-0 z-99 flex flex-col items-center py-4 rounded-md">
-                {SocialIconsList.map((item) => (
+            <div className="max-md:hidden w-16 bg-[#0000002d] shadow-md shadow-gray-600 backdrop-blur-md fixed top-[30%] right-0 z-[999999] flex flex-col items-center py-4 rounded-md">
+                {SocialIconsList.map((item, i) => (
                     <Link
                         target="__blank"
                         href={
@@ -30,7 +30,7 @@ const SocialIcons: FC<infoProps> = ({
                                             ? instagram
                                             : facebook
                         }
-                        key={item.path}
+                        key={i}
                     >
                         <motion.div
                             {...AnimationData.zoomInOut}

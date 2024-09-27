@@ -20,12 +20,12 @@ export const metadata: Metadata = {
 
 const Experiences = () => {
   return (
-    <section className='py-12'>
+    <section className='py-6 xs:py-12'>
       <Experience  />
       <Experience
         heading='Open Source & Hackathons'
         headingImg='/hackathon.png' 
-        category='Hackathon'
+        category='Hackathon' 
       />
       
     </section>

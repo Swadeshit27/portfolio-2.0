@@ -1,6 +1,6 @@
 import { SlideTopLeftAnimation } from "@/utils/AnimationDiv";
-import { Calendar, MapPin } from "lucide-react"; 
-import { FC } from "react"; 
+import { Calendar, MapPin } from "lucide-react";
+import { FC } from "react";
 import Button from "../common/button";
 
 const ExperienceCard: FC<ExperienceProps> = ({
@@ -18,8 +18,8 @@ const ExperienceCard: FC<ExperienceProps> = ({
     position,
 }) => {
     return (
-        <div className="w-full flex gap-x-2 py-4 sm:py-8">
-            <div className='mt-4 min-w-[2rem] w-8 h-8 border-2 border-rose-500 relative after:absolute after:contents-[""] after:h-4 after:w-4 after:left-[50%] after:top-[50%] after:translate-x-[-50%] after:translate-y-[-50%] after:rounded-full after:bg-rose-500 bg-[#1C2434] rounded-full max-sm:mt-1 me-2'></div>
+        <div className="w-full flex gap-x-0.5 xxs:gap-x-2 py-4 sm:py-8">
+            <div className='mt-2 xxs:mt-1 sm:mt-4 min-w-5  xxs:min-w-[2rem] w-5 h-5 xxs:w-8 xxs:h-8 border xxs:border-2 border-rose-500 relative after:absolute after:contents-[""] after:h-2 after:w-2 xxs:after:h-4 xxs:after:w-4 after:left-[50%] after:top-[50%] after:translate-x-[-50%] after:translate-y-[-50%] after:rounded-full after:bg-rose-500 bg-[#1C2434] rounded-full  me-2'></div>
             <SlideTopLeftAnimation className="w-full font-libre p-3 sm:p-6 bg-violet-800 rounded-md relative">
                 <div
                     className={`absolute top-3 sm:top-[25px] border-solid border-y-transparent border-y-8 left-[-8px]  border-r-violet-800 border-r-8  border-l-0}`}
@@ -27,8 +27,8 @@ const ExperienceCard: FC<ExperienceProps> = ({
                 <h1 className="xs:text-lg md:text-xl font-semibold  tracking-wider text-yellow-500 mb-2 ">
                     {title}
                 </h1>
-                <h1 className="text-sm sm:text-sm mb-1 capitalize ">{position}</h1>
-                <div className="flex items-center gap-8 text-sm mb-4">
+                <h1 className="text-xs sm:text-sm mb-1 capitalize ">{position}</h1>
+                <div className="xs:flex items-center gap-8 text-xs xs:text-sm mb-4 max-xs:space-y-1.5">
                     <div className="flex items-center ">
                         <Calendar size={15} />
                         <h1 className="ms-1.5 opacity-80">{duration}</h1>
@@ -41,12 +41,12 @@ const ExperienceCard: FC<ExperienceProps> = ({
                 <div className="opacity-75 text-sm   max-xs:text-xs ">
                     {description}
                 </div>
-                {techTools &&
+                {techTools && (
                     <div className="text-sm mt-3 text-white">
                         <span className="">Working Tools: </span>
                         <span className="">{techTools}</span>
                     </div>
-                }
+                )}
                 <div className="space-x-8 mt-3">
                     {offerLetter && (
                         <Button

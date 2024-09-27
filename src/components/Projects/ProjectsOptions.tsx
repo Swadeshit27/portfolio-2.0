@@ -40,7 +40,7 @@ const ProjectsOptions = ({ projects }: { projects: projectProps[] }) => {
     const [activeBtn, setActiveBtn] = useState("Fullstack");
     return (
         <PopUpAnimation>
-            <div className='max-sm:mt-6 flex items-center sm:text-lg justify-center  capitalize flex-wrap gap-10 mt-12 font-medium'>
+            <div className='max-sm:mt-8 flex items-center sm:text-lg justify-center  capitalize flex-wrap gap-4 xs:gap-10 mt-12 font-medium'>
                 {
                     projectsCategory.map((item, i) => {
                         return (
@@ -55,7 +55,7 @@ const ProjectsOptions = ({ projects }: { projects: projectProps[] }) => {
                     })
                 }
             </div>
-            <div className='w-full h-full  grid lg:grid-cols-3 gap-8 lg:gap-12 my-12'>
+            <div className='w-full h-full  grid lg:grid-cols-3 gap-8 lg:gap-12 my-8 xs:my-12'>
                 {
                     projects.length > 0 &&
                     projects

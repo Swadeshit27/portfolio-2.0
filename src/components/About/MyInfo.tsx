@@ -12,18 +12,18 @@ const MyInfo = async () => {
     const data: any = await myInfoService.getAllInfo();
     const myInfo: infoProps = data.documents[0];
     return (
-        <section className="py-16 sm:py-24 ">
-            <div className="layout h-full flex max-md:flex-col justify-between mx-auto pb-12">
-                <SlideUpAnimation className="max-md:order-2 w-full md:w-3/5 min-h-[60vh] h-full font-libre ">
+        <section className="py-10 sm:py-24 ">
+            <div className="w-full h-full flex max-md:flex-col justify-between mx-auto pb-6 xs:pb-10">
+                <SlideUpAnimation className="max-md:order-2 w-full md:w-3/5 xs:min-h-[60vh] h-full">
                     <p className="text-sm sm:text-lg font-semibold text-yellow-500 w-full mb-2">
-                        Hello, I&apos;m 👋
+                        Hello,👋
                     </p>
                     {/* <h1
                         className={`text-3xl sm:text-5xl font-[600] my-2 text-violet-600`}
                     >
                         {myInfo?.name || "Swadesh Pal"}
                     </h1> */}
-                    <p className="opacity-75 max-sm:text-sm">
+                    <p className=" max-sm:text-sm">
                         {myInfo?.homeDescription || "I am a passionate and driven individual pursuing a Bachelor of Technology degree in Information Technology from Jalpaiguri Government Engineering College in Jalpaiguri, West Bengal. I am a Full MERN stack developer with expertise in data structures and algorithms. I have developed web applications using React, Node.js, Express.js, and MongoDB. I am very much interested in open source contribution"}
                     </p>
                     <div className="flex gap-x-8 my-6">
@@ -31,6 +31,7 @@ const MyInfo = async () => {
                             text="Resume"
                             isLink={true}
                             size="lg"
+                            className="max-xxs:px-6 max-xxs:py-2 max-xxs:text-sm"
                             link={myInfo?.resume ||
                                 "https://cloud.appwrite.io/v1/storage/buckets/66241b72624e71cbcd6a/files/66435eeb002084a85efa/view?project=662415d3bdf8f8d8078b&mode=admin"
                             }
@@ -41,10 +42,11 @@ const MyInfo = async () => {
                             variant="outline"
                             size="lg"
                             isNavigate={true}
+                            className="!border-violet-400 !text-violet-400 max-xxs:px-6 max-xxs:py-2 max-xxs:text-sm" 
                         />
                     </div>
                 </SlideUpAnimation>
-                <div className={"md:w-1/4 h-full relative flex  justify-center max-md:order-1 max-md:my-12"}>
+                <div className={"md:w-1/4 h-full relative flex  justify-center max-md:order-1 max-md:my-8"}>
                     <div
                         className="w-[15rem] min-w-[15rem] sm:w-[18rem] h-[17rem] sm:h-[20rem] bg-gradient-to-b from-rose-500 to-violet-500 rounded-lg mx-auto rotate-[8deg] "
                     ></div>
@@ -63,35 +65,35 @@ const MyInfo = async () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-wrap gap-x-16 font-libre">
+            <div className="flex flex-wrap gap-6 xs:gap-12 md:gap-16 font-libre">
                 <PopUpAnimation>
-                    <h1 className="text-xl sm:text-2xl text-green-500 font-medium my-4 capitalize">
+                    <h1 className="text-xl sm:text-2xl text-green-500 font-medium my-2 xs:my-4 capitalize">
                         language proficiency :-
                     </h1>
-                    <h2 className="sm:text-base   ms-4 mb-2 capitalize">
+                    <h2 className="text-sm sm:text-base ms-4 mb-2 capitalize">
                         bengali{" "}
-                        <span className=" opacity-75 text-sm">
+                        <span className=" opacity-75 text-xs xs:text-sm">
                             ( Full professional proficiency )
                         </span>
                     </h2>
-                    <h2 className="sm:text-base  ms-4 mb-2 capitalize">
+                    <h2 className="text-sm sm:text-base  ms-4 mb-2 capitalize">
                         english{" "}
-                        <span className=" opacity-75 text-sm">
+                        <span className=" opacity-75 text-xs xs:text-sm">
                             ( Full professional proficiency )
                         </span>
                     </h2>
-                    <h2 className="sm:text-base  ms-4 mb-2 capitalize">
+                    <h2 className="text-sm sm:text-base ms-4 mb-2 capitalize">
                         hindi{" "}
-                        <span className=" opacity-75 text-sm">
+                        <span className=" opacity-75 text-xs xs:text-sm">
                             ( Full professional proficiency )
                         </span>
                     </h2>
                 </PopUpAnimation>
                 <PopUpAnimation>
-                    <h1 className="text-xl sm:text-2xl text-green-500 font-medium my-4">
+                    <h1 className="text-xl sm:text-2xl text-green-500 font-medium my-2 xs:my-4">
                         Personal Details:
                     </h1>
-                    <ul className="sm:text-base font-medium ms-4 space-y-2">
+                    <ul className="text-sm sm:text-base font-medium ms-4 space-y-2">
                         <li className="text-violet-400">
                             Date Of Birth :{" "}
                             <span className="text-gray-100">01/03/2002</span>
@@ -115,10 +117,10 @@ const MyInfo = async () => {
                     </ul>
                 </PopUpAnimation>
                 <PopUpAnimation>
-                    <h1 className="text-xl sm:text-2xl text-green-500 font-medium my-4">
+                    <h1 className="text-xl sm:text-2xl text-green-500 font-medium my-2 xs:my-4">
                         Coding Profiles:
                     </h1>
-                    <ul className="sm:text-base font-medium ms-4 space-y-2">
+                    <ul className=" text-sm sm:text-base font-medium ms-4 space-y-2">
                         {myInfo?.leetcode &&
                             <li className="text-violet-400 hover:underline">
                                 <Link target="__blank" href={myInfo.leetcode}>
@@ -163,7 +165,6 @@ const MyInfo = async () => {
                         }
                     </ul>
                 </PopUpAnimation>
-
             </div>
         </section>
     );

@@ -46,7 +46,7 @@ body {
 
 @layer base {
   .layout{
-    @apply w-full max-w-screen-xl px-8 mx-auto
+    @apply w-full max-w-screen-xl px-2 xxs:px-4 xs:px-8 mx-auto
   }
   .activeBtn {
     @apply bg-violet-500;
@@ -74,5 +74,8 @@ body {
   }
   .projectBtn{
     @apply   border  rounded-md   font-medium   
+  }
+  .drawer{
+    @apply grid-cols-1 !fixed top-0 left-0 bg-black/80
   }
 }

@@ -28,7 +28,7 @@ const Projects = async () => {
                     <div className='flex justify-center mt-8'> 
                         <Button
                             text='View More'
-                            link='/projects'
+                            path='/projects'
                             isNavigate={true}
                         />
                     </div>

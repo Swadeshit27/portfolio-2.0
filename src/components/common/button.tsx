@@ -38,7 +38,7 @@ const Button: FC<IButton> = ({
     }
     return (
         <button
-            onClick={isNavigate ? isLink ? () => window.open(link, '_blank') : navigation : onPress}
+            onClick={isLink ? () => window.open(link, '_blank') : isNavigate? navigation : onPress}
             className={`
                 ${variant === 'primary' && 'bg-violet-700 text-white'}
                 ${variant === 'secondary' && 'bg-white text-violet-700'}

@@ -34,7 +34,7 @@ const SkillsIcons: FC<Props> = ({ heading, category, skills }) => {
                                             viewport={{ once: true }}
                                             className="tooltip tooltip-warning text-white capitalize "
                                             data-tip={item.name}
-                                            key={item.name}
+                                            key={Math.random()}
                                         >
                                             <div className="w-14 min-w-14 h-14 min-h-14 sm:w-14 sm:min-w-14 sm:h-14 sm:min-h-14 rounded-md gradient  flex justify-center items-center cursor-pointer">
                                                 <div className="w-[3.4rem] min-w-[3.4rem] h-[3.4rem] min-h-[3.4rem] bg-black/80 backdrop-blur-lg rounded-md flex flex-col justify-center items-center p-2">
