@@ -12,7 +12,7 @@ const ScrollToTopBtn = () => {
         <>
             <button
                 onClick={bottomToTop}
-                className='btn w-12 h-12 z-40 rounded-full border-none hover:bg-violet-800  bg-violet-800 text-white fixed bottom-8 right-4'>
+                className='btn w-12 h-12 z-40 rounded-full border-none hover:bg-violet-800  bg-rose-600 text-white fixed bottom-8 right-2'>
                 <motion.div
                     animate={{ y: [-3, 0, 3, 0, -3] }}
                     transition={{ duration: 2, easings: ["easeIn", "easeOut"], repeat: Infinity }} 
