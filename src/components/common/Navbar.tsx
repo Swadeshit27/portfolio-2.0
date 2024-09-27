@@ -128,7 +128,7 @@ const Navbar = (): JSX.Element => {
                 </div>
             )} */}
             <div
-                className={`drawer z-[9999] ${open ? "  drawer-open" : "" }`}
+                className={`drawer z-[9999] ${open ? "  drawer-open" : ""}`}
             >
                 <input
                     id="my-drawer"
@@ -137,7 +137,7 @@ const Navbar = (): JSX.Element => {
                     checked={open}
                     readOnly
                 />
-                <div className="drawer-side w-full max-w-sm"> 
+                <div className="drawer-side w-full max-w-sm">
                     <div
                         className={`menu p-6 w-4/5 h-full bg-[#1C2434]  transition-all ease-linear duration-500 flex justify-center items-center`}
                     >
@@ -146,7 +146,11 @@ const Navbar = (): JSX.Element => {
                             <div className="float-right translate-x-4 -translate-y-4">
                                 <RxCross2 size={30} onClick={() => setOpen(false)} />
                             </div>
-                            <Link href={"/"} className="z-[99] w-48 mx-auto">
+                            <Link
+                                href={"/"}
+                                className="z-[99] w-48 mx-auto"
+                                onClick={() => setOpen(false)}
+                            >
                                 <Image
                                     src="/logo.png"
                                     width={150}
@@ -165,7 +169,7 @@ const Navbar = (): JSX.Element => {
                                 {NavItemList.map((item, index) => (
                                     <li
                                         key={index}
-                                        className={`cursor-pointer my-1.5 ${pathname === item.path ? "text-green-500" : "text-white" }`}
+                                        className={`cursor-pointer my-1.5 ${pathname === item.path ? "text-green-500" : "text-white"}`}
                                     >
                                         <Link href={item.path}>
                                             <span
