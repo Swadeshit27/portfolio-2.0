@@ -10,6 +10,8 @@ import AnimatedBoxes from '@/components/animated-boxes'
 import { Suspense } from 'react'
 import Loading from './loading'
 import Footer from '@/components/common/Footer' 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const spaceMono = Space_Mono({
   weight: "400",
@@ -61,6 +63,8 @@ export default function RootLayout({
         <ScrollToTopBtn />
         <Toaster />
         <Footer />
+        <SpeedInsights />
+        <Analytics/>
       </body>
     </html>
   )
