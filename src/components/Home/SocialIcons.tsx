@@ -1,8 +1,5 @@
-"use client";
 
-import React, { FC } from "react";
-import { motion } from "framer-motion";
-import { AnimationData } from "@/utils/animation";
+import React, { FC } from "react"; 
 import Link from "next/link";
 import { SocialIconsList } from "@/utils/SocialIconsList";
 
@@ -32,13 +29,12 @@ const SocialIcons: FC<infoProps> = ({
                         }
                         key={i}
                     >
-                        <motion.div
-                            {...AnimationData.zoomInOut}
-                            className="my-2 cursor-pointer"
+                        <div 
+                            className="my-2 cursor-pointer hover:scale-105 transition-all ease-linear duration-300"
                             style={{ color: item.color }}
                         >
                             {item.icon}
-                        </motion.div>
+                        </div>
                     </Link>
                 ))}
             </div>

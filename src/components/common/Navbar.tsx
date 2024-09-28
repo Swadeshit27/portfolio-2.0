@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import {

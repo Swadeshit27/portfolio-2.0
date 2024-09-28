@@ -1,6 +1,5 @@
 import Image from "next/image";
-import React from "react";
-import Photo2 from "@/assets/photo2.png"; 
+import React from "react"; 
 import fileService from "@/appwrite/file";
 import TypewriteEffect from "./TypewriteEffect";
 import Button from "../common/button";
@@ -17,7 +16,7 @@ const HomePage = async () => {
             <div className="h-auto layout py-10 xs:py-16 sm:py-24 flex max-md:flex-col justify-between items-center">
                 <SlideUpAnimation className="md:w-[50%] max-md:h-auto h-full flex flex-col justify-center  items-center max-md:order-2  max-md:mt-12 ">
                     <p className="text-center font-medium text-sm md:text-2xl text-yellow-500">
-                        Hello I&apos;m ✋
+                        Hello I&apos;m 👋
                     </p>
                     <h1 className="text-2xl xxs:text-3xl sm:text-4xl md:text-5xl font-semibold capitalize my-2 sm:my-4 text-violet-600">
                         {myInfo?.name || "Swadesh Pal"}
@@ -49,7 +48,7 @@ const HomePage = async () => {
                             src={
                                 myInfo
                                     ? String(fileService.getFilePreview(myInfo.homeImg as string))
-                                    : Photo2
+                                    : ""
                             }
                             alt="photo"
                             width={400}

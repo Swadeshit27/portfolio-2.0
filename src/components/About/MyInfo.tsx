@@ -1,7 +1,6 @@
 
 import React from "react";
-import Image from "next/image";
-import myPhoto from "@/assets/myphoto.png";
+import Image from "next/image"; 
 import Link from "next/link";
 import { PopUpAnimation, SlideUpAnimation } from "@/utils/AnimationDiv"; 
 import Button from "../common/button";
@@ -56,7 +55,7 @@ const MyInfo = async () => {
                     >
                         <Image
                             src={
-                                myInfo ? String(fileService.getFilePreview(myInfo.aboutImg as string)) : myPhoto
+                                myInfo ? String(fileService.getFilePreview(myInfo.aboutImg as string)) : ""
                             }
                             alt="photo"
                             width={150}

@@ -1,7 +1,7 @@
 
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
-import { FaLocationDot, FaWhatsapp, FaTelegram, FaGlobe } from "react-icons/fa6";
+import { FaLocationDot, FaWhatsapp, FaGlobe } from "react-icons/fa6";
 import Layout from "@/components/common/Layout";
 import Link from "next/link";
 import ContactForm from "@/components/Contacts/ContactForm";

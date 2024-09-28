@@ -2,9 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { AnimationData } from "./animation";
-import Image from "next/image";
-import myPhoto from "@/assets/myphoto.png";
+import { AnimationData } from "./animation"; 
 
 type props = {
   children: React.ReactNode;
@@ -76,13 +74,7 @@ export const RotateAnimation = () => {
         {...AnimationData.rotateRight}
         className=" absolute top-0 w-[15rem] sm:w-[18rem] h-[17rem] sm:h-[20rem] mx-auto rounded-lg"
       >
-        <Image
-          src={myPhoto}
-          alt="photo"
-          width={150}
-          height={150}
-          className="w-full h-full rounded-lg object-cover"
-        />
+        
       </motion.div>
     </div>
   );
