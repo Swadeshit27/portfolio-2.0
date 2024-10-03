@@ -1,6 +1,7 @@
 
+import toast from "react-hot-toast";
 import conf from "./conf";
-import { Client, Databases, Storage, } from "appwrite";
+import { Client, Databases, ID, Storage, } from "appwrite";
 
 export class FileService {
     client = new Client()
@@ -20,6 +21,20 @@ export class FileService {
             conf.appwriteBucketId,
             fileId
         )
+    }
+
+    async uploadFile(file: any) {
+        try {
+            return await this.bucket.createFile(
+                conf.appwriteBucketId,
+                ID.unique(),
+                file
+            )
+        } catch (error: any) {
+            console.log("Appwrite serive :: uploadFile :: error", error);
+            toast.error(error.message)
+            return false
+        }
     }
 
 }

@@ -5,6 +5,7 @@ import educationService from "@/appwrite/education";
 import experienceService from "@/appwrite/experience";
 import myInfoService from "@/appwrite/myinfo";
 import projectService from "@/appwrite/projects";
+import reviewService from "@/appwrite/reviews";
 import skillsService from "@/appwrite/skills";
 import { unstable_cache } from "next/cache";
 
@@ -75,3 +76,13 @@ export const getSkills = unstable_cache(async () => {
     }
 )
 
+export const getReviews = unstable_cache(async () => {
+    const res = await reviewService.getAllReviews();
+    return res;
+},
+    ["reviews"],
+    {
+        revalidate: 5 * 60,
+        tags: ['reviews']
+    }
+)

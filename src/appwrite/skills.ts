@@ -1,5 +1,5 @@
 import conf from "./conf";
-import { Client, ID, Databases, Storage, Query } from "appwrite";
+import { Client, Databases, Storage, Query } from "appwrite";
 
 export class SkillsService {
     client = new Client();

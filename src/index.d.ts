@@ -1,5 +1,5 @@
 
-declare interface  ItemsType {
+declare interface ItemsType {
   name: string;
   path: string;
   icon?: React.ReactElement;
@@ -83,7 +83,7 @@ declare interface projectProps {
   $id: string;
   imgSrc: string;
   title: string;
-  description: string; 
+  description: string;
   best?: string | boolean;
   tags: string;
   category: string;
@@ -120,4 +120,18 @@ declare interface ExperienceProps {
   category: string;
   techTools: string;
   position: string;
+}
+
+declare interface IReviews {
+  name: string;
+  position: string;
+  company: string;
+  linkedin: string;
+  review: string;
+  photo: string;
+}
+
+declare interface ReviewProps extends IReviews {
+  $id: string; 
+  isVerified: boolean;
 }
