@@ -57,12 +57,6 @@ const Contact = async () => {
                                         <FaGlobe size={22} color="0088cc" />
                                         website
                                     </Link>
-                                    <Link href={`tel:+91${info?.mobile || "8436893969"}`}>
-                                        <h4 className=" flex  items-center gap-4 my-3">
-                                            <FaWhatsapp size={22} color="#1aff66" />
-                                            +91{info?.mobile}
-                                        </h4>
-                                    </Link>
                                     <Link href={`mailto:${info?.email || "swadeshpal2002@gmail.com"}`}>
                                         <h4 className=" flex  items-center gap-4 my-3">
                                             <HiOutlineMail size={22} color="#3385ff" />

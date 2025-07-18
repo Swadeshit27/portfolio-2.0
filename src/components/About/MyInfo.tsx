@@ -17,12 +17,7 @@ const MyInfo = async () => {
                 <SlideUpAnimation className="max-md:order-2 w-full md:w-3/5 xs:min-h-[60vh] h-full">
                     <p className="text-sm sm:text-lg font-semibold text-yellow-500 w-full mb-2">
                         Hello,👋
-                    </p>
-                    {/* <h1
-                        className={`text-3xl sm:text-5xl font-[600] my-2 text-violet-600`}
-                    >
-                        {myInfo?.name || "Swadesh Pal"}
-                    </h1> */}
+                    </p> 
                     <p className=" max-sm:text-sm">
                         {myInfo?.aboutDescription}
                     </p>
@@ -106,12 +101,6 @@ const MyInfo = async () => {
                             Email :{" "}
                             <span className="text-gray-100">
                                 {myInfo?.email || "swadeshpal2002@gmail.com"}
-                            </span>
-                        </li>
-                        <li className="text-violet-400">
-                            Phone :{" "}
-                            <span className="text-gray-100">
-                                {myInfo?.mobile || "8436893969"}
                             </span>
                         </li>
                     </ul>
